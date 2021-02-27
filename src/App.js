@@ -1,9 +1,10 @@
 import React from "react";
+import Appbar from "./components/Appbar/Appbar";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Employee manager</h1>
+      <Appbar />
     </div>
   );
 };
