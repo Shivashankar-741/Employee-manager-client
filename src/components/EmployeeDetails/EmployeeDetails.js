@@ -10,7 +10,8 @@ const EmployeeDetails = () => {
     <div className={classes.cardsRoot}>
       <Grow in>
         <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={4}>
+          {/* //justify="space-between" alignItems="stretch" */}
+          <Grid container spacing={4}>
             <Grid item xs={12} className={classes.gridOne}>
               <EmployeeCards />
             </Grid>

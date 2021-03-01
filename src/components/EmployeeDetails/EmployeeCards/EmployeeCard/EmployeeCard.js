@@ -12,22 +12,27 @@ const EmployeeCard = () => {
         <Card className={classes.EmployeeCard}>
           <div className={classes.EmployeeCard__info}>
             <div className={classes.EmployeeCard__img}>
-              <img src="" alt="" srcset="" />
+              <img
+                className={classes.EmployeeCard__img__in}
+                src="https://www.bootdey.com/img/Content/avatar/avatar7.png"
+                alt=""
+                srcset=""
+              />
             </div>
-            <div className="">
+            <div className={classes.name}>
               <Typography variant="h5">Shiva shankar</Typography>
               <Typography variant="body2">Javascript</Typography>
             </div>
           </div>
           <div className={classes.email}>
-            <Typography variant="subtitle1">Email:Shiva1894300@gmail.com</Typography>
+            <Typography variant="body1">Email:Shiva1894300@gmail.com</Typography>
           </div>
           <div className={classes.phone}>
-            <Typography variant="subtitle1">phone:123456790</Typography>
+            <Typography variant="body1">phone:123456790</Typography>
           </div>
-          <div>
-            <EditIcon />
-            <DeleteIcon />
+          <div className={classes.icons}>
+            <EditIcon className={classes.editIcon} />
+            <DeleteIcon className={classes.deleteIcon} />
           </div>
         </Card>
       </Grid>
