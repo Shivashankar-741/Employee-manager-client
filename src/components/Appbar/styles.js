@@ -4,8 +4,12 @@ export default makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  AppBar: {
+  appBar: {
     backgroundColor: "#333",
+  },
+  toolBar: {
+    display: "flex",
+    alignItems: "center",
   },
   title: {
     marginRight: "40px",

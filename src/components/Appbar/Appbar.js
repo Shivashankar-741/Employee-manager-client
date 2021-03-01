@@ -24,12 +24,12 @@ const Appbar = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
-        <AppBar position="static" className={classes.AppBar}>
-          <Toolbar>
+        <AppBar position="static" className={classes.appBar}>
+          <Toolbar className={classes.toolBar}>
             <Typography className={classes.title} variant="h6">
               Employee Manager
             </Typography>
-            <Typography className={classes.addEmployee} variant="h6" onClick={ModalOpen}>
+            <Typography className={classes.addEmployee} variant="subtitle1" onClick={ModalOpen}>
               Add Employee
             </Typography>
           </Toolbar>
