@@ -14,7 +14,4 @@ export default makeStyles((theme) => ({
   title: {
     marginRight: "40px",
   },
-  addEmployee: {
-    cursor: "pointer",
-  },
 }));

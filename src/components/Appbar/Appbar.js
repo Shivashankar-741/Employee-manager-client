@@ -4,10 +4,12 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import TransitionsModal from "../Modal/Modal";
 
-const Appbar = () => {
+const Appbar = ({ currentId, SetCurrentId }) => {
+  console.log(currentId);
+
   const classes = useStyles();
-
   const theme = createMuiTheme();
 
   theme.typography.h6 = {
@@ -15,10 +17,6 @@ const Appbar = () => {
     "@media (max-width:600px)": {
       fontSize: "1.1rem",
     },
-  };
-
-  const ModalOpen = () => {
-    console.log("model opened");
   };
 
   return (
@@ -29,9 +27,7 @@ const Appbar = () => {
             <Typography className={classes.title} variant="h6">
               Employee Manager
             </Typography>
-            <Typography className={classes.addEmployee} variant="subtitle1" onClick={ModalOpen}>
-              Add Employee
-            </Typography>
+            <TransitionsModal currentId={currentId} SetCurrentId={SetCurrentId} />
           </Toolbar>
         </AppBar>
       </div>
