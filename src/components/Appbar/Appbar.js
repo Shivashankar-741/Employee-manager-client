@@ -23,7 +23,7 @@ const Appbar = ({ currentId, SetCurrentId }) => {
         <AppBar position="static" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
             <Typography className={classes.title} variant="h6">
-              Employee Manager
+              Employee Managers
             </Typography>
             <TransitionModal currentId={currentId} SetCurrentId={SetCurrentId} />
           </Toolbar>
