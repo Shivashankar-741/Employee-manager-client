@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import useStyles from "./styles";
 import Form from "../Form/Form";
 
-const TransitionsModal = ({ currentId, SetCurrentId }) => {
-  console.log(currentId);
-
+const TransitionModal = ({ currentId, SetCurrentId }) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -19,9 +17,11 @@ const TransitionsModal = ({ currentId, SetCurrentId }) => {
     setOpen(false);
   };
 
-  // if (currentId) {
-  //   setOpen(true);
-  // }
+  useEffect(() => {
+    if (currentId) {
+      setOpen(true);
+    }
+  }, [currentId]);
 
   return (
     <div>
@@ -54,4 +54,4 @@ const TransitionsModal = ({ currentId, SetCurrentId }) => {
   );
 };
 
-export default TransitionsModal;
+export default TransitionModal;

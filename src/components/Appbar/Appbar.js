@@ -4,11 +4,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import TransitionsModal from "../Modal/Modal";
+import TransitionModal from "../TransitionModal/TransitionModal";
 
 const Appbar = ({ currentId, SetCurrentId }) => {
-  console.log(currentId);
-
   const classes = useStyles();
   const theme = createMuiTheme();
 
@@ -27,7 +25,7 @@ const Appbar = ({ currentId, SetCurrentId }) => {
             <Typography className={classes.title} variant="h6">
               Employee Manager
             </Typography>
-            <TransitionsModal currentId={currentId} SetCurrentId={SetCurrentId} />
+            <TransitionModal currentId={currentId} SetCurrentId={SetCurrentId} />
           </Toolbar>
         </AppBar>
       </div>

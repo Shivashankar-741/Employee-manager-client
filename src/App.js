@@ -1,24 +1,13 @@
 import { Container, CssBaseline } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getPosts } from "./actions/posts";
+import React, { useState } from "react";
 import Appbar from "./components/Appbar/Appbar";
 import EmployeeDetails from "./components/EmployeeDetails/EmployeeDetails";
 import useStyles from "./styles.js";
 
 const App = () => {
-  console.log(process.env.EMPLOYEE_MANAGER);
   const classes = useStyles();
 
-  const dispatch = useDispatch();
-
   const [currentId, SetCurrentId] = useState(null);
-
-  console.log(currentId);
-
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [currentId, dispatch]);
 
   return (
     <div className="App">

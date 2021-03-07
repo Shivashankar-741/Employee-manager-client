@@ -2,16 +2,11 @@ import React, { useEffect, useState } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import useStyles from "./styles";
 import { useDispatch, useSelector } from "react-redux";
-import { createPost } from "../../actions/posts";
+import { createPost, updatePost } from "../../actions/posts";
 
-const Form = ({ openModal, closeModal, currentId, SetCurrentId }) => {
-  console.log(currentId);
+const Form = ({ closeModal, currentId, SetCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-
-  // if (currentId) {
-  //   openModal();
-  // }
 
   const [postData, setPostData] = useState({
     name: "",
@@ -23,8 +18,6 @@ const Form = ({ openModal, closeModal, currentId, SetCurrentId }) => {
   const post = useSelector((state) =>
     currentId ? state.posts.find((p) => p._id === currentId) : null
   );
-
-  console.log(post);
 
   useEffect(() => {
     if (post) {
@@ -49,23 +42,23 @@ const Form = ({ openModal, closeModal, currentId, SetCurrentId }) => {
       postData.phoneNumber !== ""
     ) {
       console.log(postData);
-      dispatch(
-        createPost({
-          ...postData,
-          imageURL: `https://www.bootdey.com/img/Content/avatar/avatar${randomImg}.png`,
-        })
-      );
-      setPostData({
-        name: "",
-        jobTitle: "",
-        email: "",
-        phoneNumber: "",
-      });
-      closeModal();
+
+      if (currentId) {
+        dispatch(updatePost(currentId, postData));
+      } else {
+        dispatch(
+          createPost({
+            ...postData,
+            imageURL: `https://www.bootdey.com/img/Content/avatar/avatar${randomImg}.png`,
+          })
+        );
+      }
+      clear();
     }
   };
 
   const clear = () => {
+    SetCurrentId(null);
     setPostData({
       name: "",
       jobTitle: "",
