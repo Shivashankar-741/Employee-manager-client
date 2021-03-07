@@ -17,7 +17,7 @@ const EmployeeDetails = ({ SetCurrentId }) => {
     <div className={classes.cardsRoot}>
       <Grow in>
         <Container>
-          <Grid container spacing={4}>
+          <Grid container spacing={2}>
             <Grid item xs={12} className={classes.gridOne}>
               <EmployeeCards SetCurrentId={SetCurrentId} />
             </Grid>

@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   cardsContainer: {
     marginTop: "30px",
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 

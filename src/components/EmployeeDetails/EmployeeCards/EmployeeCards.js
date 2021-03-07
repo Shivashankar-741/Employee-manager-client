@@ -9,9 +9,9 @@ const EmployeeCards = ({ SetCurrentId }) => {
 
   const classes = useStyles();
   return (
-    <Grid className={classes.EmployeeCards} container alignItems="stretch" spacing={2}>
+    <Grid className={classes.EmployeeCards} container spacing={2}>
       {posts.map((el, idx) => (
-        <Grid item key={idx.toString()} xs={12} sm={4}>
+        <Grid item key={idx.toString()} xs={12} sm={6} md={4}>
           <EmployeeCard employee={el} SetCurrentId={SetCurrentId} />
         </Grid>
       ))}

@@ -7,6 +7,12 @@ export default makeStyles((theme) => ({
     width: "300px",
   },
 
+  EmployeeCard__img: {
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "15px",
+  },
+
   EmployeeCard__img__in: {
     width: "250px",
   },

@@ -18,4 +18,12 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  addEmployee: {
+    padding: "5px 10px",
+    cursor: "pointer",
+    borderRadius: "5px",
+    border: "none",
+    outline: "none",
+  },
 }));

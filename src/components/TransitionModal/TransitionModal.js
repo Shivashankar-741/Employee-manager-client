@@ -25,7 +25,7 @@ const TransitionModal = ({ currentId, SetCurrentId }) => {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
+      <button type="button" className={classes.addEmployee} onClick={handleOpen}>
         Add Employee
       </button>
       <Modal
